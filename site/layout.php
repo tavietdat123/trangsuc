@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sản Phẩm</title>
-    <link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon">
+    <title><?=$TITLE_NAME ?></title>
+    <link rel="shortcut icon" href="/content/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/content/lib/bootstrap-5.2.0-dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/fontawesome-free-6.1.1-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/content/css/style.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
                         </ul>
                     </div>
                     <div>
-                        <a href="/home.php"><img class="logo__img" src="/assets/img/pnj.com 1.png" alt=""></a>
+                        <a href="index.php"><img class="logo__img" src="/content/img/pnj.com 1.png" alt=""></a>
                     </div>
                     <div class="function">
                         <ul class="logo__list d-flex">
@@ -53,27 +53,27 @@
                 <?php endif; ?>
                   <?php if(!isset($_SESSION['name'])): ?>
                     <li class="logo__item">
-                  <a class="logo__link" href="/login.php"
+                  <a class="logo__link" href="index.php?login"
                     ><span class="logo__text login">Đăng nhập</span></a
                   >
                 </li>
                 <li class="logo__item">
-                  <a class="logo__link" href="/register.php"
+                  <a class="logo__link" href="index.php?register"
                     ><span class="logo__text register">Đăng kí</span></a
                   >
                 </li>
                 <?php endif ?>
-                            <li class="logo__item"><a class="logo__link" href="/cart.php"><img src="https://cdn.pnj.io/images/image-update/layout/icon-cart-new.svg" alt=""><span class="logo__text">Giỏ Hàng</span></a></li>
+                            <li class="logo__item"><a class="logo__link" href="index.php?cart"><img src="https://cdn.pnj.io/images/image-update/layout/icon-cart-new.svg" alt=""><span class="logo__text">Giỏ Hàng</span></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="header__nav d-flex align-items-center justify-content-between">
                     <div class="nav">
                         <ul class="nav__list d-flex">
-                            <li class="nav__item"><a href="/home.php" class="nav__link ">Trang chủ</a></li>
-                            <li class="nav__item"><a href="/introduce.php" class="nav__link ">Liên Hệ</a></li>
-                            <li class="nav__item"><a href="/product.php" class="nav__link active">Sản Phẩm</a></li>
-                            <li class="nav__item"><a href="/promotion.php" class="nav__link orange">Khuyến Mãi</a></li>
+                            <li class="nav__item"><a href="index.php" class="nav__link <?php if($VIEW_NAME=="home.php"){echo"active";}?>">Trang chủ</a></li>
+                            <li class="nav__item"><a href="index.php?introduce" class="nav__link <?php if($VIEW_NAME=="introduce.php"){echo"active";}?>">Liên Hệ</a></li>
+                            <li class="nav__item"><a href="index.php?productdetail" class="nav__link <?php if($VIEW_NAME=="product.php"){echo"active";}?>">Sản Phẩm</a></li>
+                            <li class="nav__item"><a href="index.php?promotion" class="nav__link orange">Khuyến Mãi</a></li>
                         </ul>
                     </div>
                     <div class="form__search ">
@@ -89,14 +89,14 @@
             </header>
         </div>
     </div>
-   <div class="mt-105">
-    
+   <div class="mt-105  m-80">
+    <?php include_once $VIEW_NAME ?>
    </div>
 
     <div class="container-fluid">
         <div class="footer">
             <div class="footer_logo d-flex justify-content-center mt-5 mb-5">
-                <img src="/assets/img/pnj.com 1.png" alt="">
+                <img src="/content/img/pnj.com 1.png" alt="">
             </div>
             <div class="row footer_list">
                 <div class="col-3 footer_item text-center">
@@ -196,7 +196,8 @@
             </div>
         </div>
     </div>
-    <script src="/js/contact.js"></script>
+    <script src="/content/js/contact.js"></script>
+
 </body>
 
 </html>
