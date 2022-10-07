@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
 // function x(){
 // $a=func_get_args();
@@ -35,3 +36,10 @@
 // //pro_insert($name,$price,$origin,$quantity,$image, $category_id);
 // pro_update($id,$name,$price,$origin,$quantity,$image, $category_id);
 // // ?>
+=======
+<?php
+
+header("location: site/index.php");
+
+?>
+>>>>>>> 50ee9fca2e3be15eea3ff08f6bbc66877aa8321c
