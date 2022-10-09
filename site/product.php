@@ -1,3 +1,6 @@
+<?php
+$prd_all = pro_selectall();
+ ?>
 <div class="container p-0 ">
         <img width="w-100" src="https://cdn.pnj.io/images/promo/135/cuoi-t7-1200x450.jpg" alt="">
     </div>
@@ -77,10 +80,10 @@
     </div>
     <div class="container container_prd">
         <div class="row">
-            <?php foreach ($product as $key => $value):?>
+            <?php foreach ($prd_all as $key => $value):?>
             <div class="col-3 col ">
                 <div class="product_item">
-                    <a href="/productdetail.php?id=<?=$value['id']?>" class="product_trending_link d-flex flex-column">
+                    <a href="index.php?productdetail&id=<?=$value['id']?>" class="product_trending_link d-flex flex-column">
                         <div class="product_trending_img_scale">
                             <div class="product_trending_img" style="background-image: url('assets/img/<?= $value['image'] ?>');"></div>
                         </div>

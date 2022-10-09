@@ -3,9 +3,9 @@
  * Mở kết nối đến CSDL sử dụng PDO
  */
 function pdo_get_connection(){
-    $dburl = "mysql:host=202.92.5.49;dbname=srmoyqklhosting_nhom8;charset=utf8";
-    $username = 'srmoyqklhosting_nhom8';
-    $password = 'NscpThOTYhjC';
+    $dburl = "mysql:host=127.0.0.1;dbname=duanluxury;charset=utf8";
+    $username = 'root';
+    $password = '';
     $conn = new PDO($dburl, $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return $conn;
@@ -22,7 +22,6 @@ function pdo_execute($sql){
         $conn = pdo_get_connection();
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
-        echo "done";
     }
     catch(PDOException $e){
         throw $e;

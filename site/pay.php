@@ -1,3 +1,11 @@
+<?php
+
+if(isset($_SESSION['name'])){
+$user = user_selectusername($_SESSION['name'])['id'];
+$carts = cart_selectall_user_id($user);
+$result1 = 0;
+}
+?>
 <div class="container mt-4">
         <form class="needs-validation" name="frmthanhtoan" method="post"
             action="#">
@@ -19,14 +27,10 @@
                        
                         <?php foreach($carts as $index =>$value): ?>
                             <?php
-            $product_id = $value['product_id'];
-                $sql3 = "SELECT * FROM products WHERE id = $product_id";
-                $stmt2 = $connect->prepare($sql3);
-                $stmt2->execute();
-                $prd = $stmt2->fetch();
-                $result = ($value['quantity'] * $prd['price']);
-                $result1 += $result; 
-                ?>
+            $prd = pro_select_one($value['product_id']);
+            $result = ($value['quantity'] * $prd['price']);
+            $result1 += $result; ?>
+              
                         <li class="list-group-item d-flex justify-content-between lh-condensed">
                             <div>
                                 <h6 class="my-0"><?=$prd['name']?></h6>
@@ -34,10 +38,7 @@
                             </div>
                             <span class="text-muted"><?=$result?></span>
                         </li>
-<?php endforeach; ?>
-                       
-
-                        
+<?php endforeach; ?>  
                         <li class="list-group-item d-flex justify-content-between">
                             <span>Tổng thành tiền</span>
                             <strong><?=$result1?></strong>

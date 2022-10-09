@@ -1,3 +1,14 @@
+<?php
+$id = $_GET['id']; 
+$detail = detail_select_one($id);
+$product = pro_select_one($id);
+$id_product = $product['category_id'];
+$ctgr =  pro_select_id_ctgr($id_product);
+if(isset($_SESSION['name'])){
+$username = $_SESSION['name'];
+$user = user_selectusername($username);
+}
+?>
 <div class="container p-0">
 <div class="detail_load text-center">
     <span> <a class="detail_load_link1" href="/home.php">Trang chủ</a> / <a class="detail_load_link1" href="/product.php">Bông Tai</a> / <a class="detail_load_link2" href=""><?= $product['name']?></a></span>
@@ -97,7 +108,7 @@
     <div class="home_product_trending1">
       <div class="overflow-hidden">
         <div class="product_trending_list d-flex">
-<?php foreach ($category as $key => $value):?>
+<?php foreach ($ctgr as $key => $value):?>
           <div class="product_trending_item">
             <a
               href="productdetail.php?id=<?=$value['id'] ?>"

@@ -1,11 +1,16 @@
 <?php
-require_once './dao/pdo_dao.php';
+require_once 'pdo_dao.php';
 
 //Gọi tất cả bảng
 function category_selectall()
 {
     $sql = "SELECT * from category";
     return pdo_query($sql);
+}
+function category_select_one($id)
+{
+    $sql = "SELECT * from category where id = $id";
+    return pdo_query($pdo_query_one);
 }
 
 //Thêm 

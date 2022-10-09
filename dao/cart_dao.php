@@ -1,30 +1,35 @@
 <?php
-require_once './dao/pdo_dao.php';
+require_once 'pdo_dao.php';
 
 //Gọi tất cả bảng
 function cart_selectall()
 {
-    $sql = "SELECT * from cart";
+    $sql = "SELECT * from carts";
+    return pdo_query($sql);
+}
+function cart_selectall_user_id($id)
+{
+    $sql = "SELECT * from carts where user_id = '$id'";
     return pdo_query($sql);
 }
 
 //Thêm 
-function cart_insert($product_id, $user_id)
+function cart_insert($product_id, $user_id,$size)
 {
-    $sql = "insert into cart (product_id, user_id)
-        values(?,?)";
-    pdo_execute($sql, $product_id, $user_id);
+    $sql = "insert into carts (product_id, user_id,quantity)
+        values(?,?,?)";
+    pdo_execute($sql, $product_id, $user_id, $size);
 }
 
-function cart_update($id, $product_id, $user_id)
+function cart_update($product_id, $user_id,$size)
 {
-    $sql = "UPDATE cart SET product_id = ?, user_id = ? WHERE id = ?";
-    pdo_execute($sql, $product_id, $user_id);
+    $sql = "UPDATE carts SET quantity = $size WHERE user_id = $user_id and  product_id = $product_id";
+    pdo_execute($sql);
 }
 
 //Xóa 
 function cart_delete($id)
 {
-    $sql = "delete from cart where id = ?";
+    $sql = "delete from carts where id = ?";
     pdo_execute($sql, $id);
 }

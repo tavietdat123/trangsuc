@@ -1,13 +1,17 @@
 <?php
-require_once './dao/pdo_dao.php';
+require_once 'pdo_dao.php';
 
-//Gọi tất cả bảng
+
 function user_selectall()
 {
     $sql = "SELECT * from users";
     return pdo_query($sql);
 }
-
+function user_selectusername($username)
+{
+    $sql = "SELECT * from users where username = '$username'";
+    return pdo_query_one($sql);
+}
 //Thêm khách hàng
 function user_insert($username, $password, $name, $role_id)
 {

@@ -1,5 +1,5 @@
 <?php
-require_once './dao/pdo_dao.php';
+require_once 'pdo_dao.php';
 
 //Gọi tất cả bảng
 function pro_selectall()
@@ -7,7 +7,16 @@ function pro_selectall()
     $sql = "SELECT * from products";
     return pdo_query($sql);
 }
-
+function pro_select_one($id)
+{
+    $sql = "SELECT * from products  where id = $id";
+    return pdo_query_one($sql);
+}
+function pro_select_id_ctgr($id)
+{
+    $sql = "SELECT * from products WHERE category_id = $id";
+    return pdo_query($sql);
+}
 //Thêm san pham
 function pro_insert($name,$price,$origin,$quantity,$image, $category_id)
 {

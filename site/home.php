@@ -1,3 +1,9 @@
+<?php
+ $ctgr1 =  pro_select_id_ctgr(1);
+ $ctgr2 = pro_select_id_ctgr(2);
+  
+  
+  ?>
 <div class="container_slide">
     <div class="slider container-fluid p-0">
       <div class="slide__img">
@@ -83,7 +89,7 @@
           <div class="product_trending_list d-flex">
 
 
-            <?php foreach ($category1 as $key => $value) : ?>
+            <?php foreach ($ctgr1 as $key => $value) : ?>
               <div class="product_trending_item">
                 <a href="productdetail.php?id=<?= $value['id'] ?>" class="product_trending_link d-flex flex-column">
                   <div class="product_trending_img" style="
@@ -125,7 +131,7 @@
         <div class="home_collection_product">
           <div class="overflow-hidden w-760">
             <div class="collection_list d-flex">
-              <?php foreach ($category as $key => $value) : ?>
+              <?php foreach ($ctgr2 as $key => $value) : ?>
 
                 <div class="collection_product_item">
                   <a href="productdetail.php?id=<?= $value['id'] ?>" class="collection_product_link">

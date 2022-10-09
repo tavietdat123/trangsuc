@@ -1,5 +1,12 @@
 <?php
 require_once '../global.php';
+session_start();
+require_once "../dao/user_dao.php";
+require_once "../dao/product_dao.php";
+require_once "../dao/detail_dao.php";
+require_once "../dao/category_dao.php";
+require_once "../dao/cart_dao.php";
+
 if(isset($_GET['product'])){
 
     $VIEW_NAME = 'product.php';
@@ -29,17 +36,19 @@ if(isset($_GET['product'])){
     $VIEW_NAME = 'cart.php';
     $TITLE_NAME = "Giỏ Hàng";
 
-}elseif(isset($_GET['login'])){
+}
+// elseif(isset($_GET['login'])){
 
-    $VIEW_NAME = 'login.php';
-    $TITLE_NAME = "Đăng Nhập";
+//     $VIEW_NAME = 'login.php';
+//     $TITLE_NAME = "Đăng Nhập";
 
-}elseif(isset($_GET['register'])){
+// }elseif(isset($_GET['register'])){
 
-    $VIEW_NAME = 'register.php';
-    $TITLE_NAME = "Đăng Kí";
+//     $VIEW_NAME = 'register.php';
+//     $TITLE_NAME = "Đăng Kí";
 
-}else {
+// }
+else {
     $VIEW_NAME = 'home.php';
     $TITLE_NAME = "Trang Chủ";
 

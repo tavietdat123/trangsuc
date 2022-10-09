@@ -1,3 +1,11 @@
+<?php
+if(isset($_SESSION['name'])){
+$id = user_selectusername($_SESSION['name'])['id'];
+$carts = cart_selectall_user_id($id);
+$result1 = 0;
+}
+
+?>
 <div class="container p-0 container_cart">
 <?php if(isset($carts) &&  !$carts): ?>
 <!-- no-product -->
@@ -15,10 +23,6 @@
     <a href="index.php?login" class="btn btn-danger mt-3">Đăng nhập</a>
     </div>
 <?php endif; ?>
-
-
-<!--have products                ------>
-
 <?php if(isset($carts) &&  $carts): ?>
 
 <div class="col-12 ">
@@ -35,15 +39,9 @@
         <tbody>
             <?php foreach($carts as $index =>$value): ?>
             <?php
-            $product_id = $value['product_id'];
-                $sql3 = "SELECT * FROM products WHERE id = $product_id";
-                $stmt2 = $connect->prepare($sql3);
-                $stmt2->execute();
-                $prd = $stmt2->fetch();
+                $prd = pro_select_one($value['product_id']);
             $result = ($value['quantity'] * $prd['price']);
-            
-            $result1 += $result; 
-                ?>
+            $result1 += $result; ?>
             <tr>
                 <td data-th="Product">
                     <div class="row">

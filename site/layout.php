@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +40,7 @@
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLhlPE0gXGOoAq3qU3GHKSS2Ih3VQDLzZ6GQ&usqp=CAU"
                     alt=""
                   /></div><div>
-                    <span class="logo__text_user register"><?=$user['name']?></span>
+                    <span class="logo__text_user register"><?=user_selectusername($_SESSION['name'])['name']?></span>
                   </div>
                   <div class="control_user">
                     <div class="control_user_list">
@@ -53,12 +54,12 @@
                 <?php endif; ?>
                   <?php if(!isset($_SESSION['name'])): ?>
                     <li class="logo__item">
-                  <a class="logo__link" href="index.php?login"
+                  <a class="logo__link" href="login.php"
                     ><span class="logo__text login">Đăng nhập</span></a
                   >
                 </li>
                 <li class="logo__item">
-                  <a class="logo__link" href="index.php?register"
+                  <a class="logo__link" href="register.php"
                     ><span class="logo__text register">Đăng kí</span></a
                   >
                 </li>
@@ -72,7 +73,7 @@
                         <ul class="nav__list d-flex">
                             <li class="nav__item"><a href="index.php" class="nav__link <?php if($VIEW_NAME=="home.php"){echo"active";}?>">Trang chủ</a></li>
                             <li class="nav__item"><a href="index.php?introduce" class="nav__link <?php if($VIEW_NAME=="introduce.php"){echo"active";}?>">Liên Hệ</a></li>
-                            <li class="nav__item"><a href="index.php?productdetail" class="nav__link <?php if($VIEW_NAME=="product.php"){echo"active";}?>">Sản Phẩm</a></li>
+                            <li class="nav__item"><a href="index.php?product" class="nav__link <?php if($VIEW_NAME=="product.php"){echo"active";}?>">Sản Phẩm</a></li>
                             <li class="nav__item"><a href="index.php?promotion" class="nav__link orange">Khuyến Mãi</a></li>
                         </ul>
                     </div>

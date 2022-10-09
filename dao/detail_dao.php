@@ -1,11 +1,16 @@
 <?php
-require_once './dao/pdo_dao.php';
+require_once 'pdo_dao.php';
 
 //Gọi tất cả bảng
 function detail_selectall()
 {
     $sql = "SELECT * from detail";
     return pdo_query($sql);
+}
+function detail_select_one($id)
+{
+    $sql = "SELECT * from detail where product_id = $id";
+    return pdo_query_one($sql);
 }
 
 //Thêm 
