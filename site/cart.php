@@ -45,7 +45,7 @@ $result1 = 0;
             <tr>
                 <td data-th="Product">
                     <div class="row">
-                        <div class="col-sm-2 hidden-xs"><img src="/assets/img/<?=$prd['image']?>" alt="Sản phẩm 1" class="img-responsive" width="100">
+                        <div class="col-sm-2 hidden-xs"><img src="/content/img/<?=$prd['image']?>" alt="Sản phẩm 1" class="img-responsive" width="100">
                         </div>
                         <div class="col-sm-10">
                             <h5 class="nomargin"><?=$prd['name']?></h5>

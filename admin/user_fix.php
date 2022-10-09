@@ -1,5 +1,27 @@
-h4>Sửa tài khoản</h4>
-<form action="adminfixuser.php?id=<?=$id?>" method="post" enctype="multipart/form-data">
+<?php
+$id = $_GET['id'];
+$stmt2s = user_selectall_id($id);
+if(isset($_POST['check'])){
+    $name = $_POST['name'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    if($name == ''){
+        $erorr_name ="Bạn Cần phải nhập tên";
+    }
+    if($username == ''){
+        $erorr_username ="Bạn Cần phải nhập username";
+    }
+    if($password == ''){
+        $erorr_password ="Bạn Cần phải nhập mật khẩu";
+    }
+    if(!isset($erorr_name)){
+        user_update($id,$username, $password, $name);
+        header("location: index.php?users");
+    }
+}
+?>
+<h4>Sửa tài khoản</h4>
+<form action="index.php?user_fix&id=<?=$id?>" method="post" enctype="multipart/form-data">
                     <input type="hidden" >
                     <div class='form-group w-75'>
                         <label class="mt-2" for="">UserName</label>

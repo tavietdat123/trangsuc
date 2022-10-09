@@ -85,7 +85,7 @@ $prd_all = pro_selectall();
                 <div class="product_item">
                     <a href="index.php?productdetail&id=<?=$value['id']?>" class="product_trending_link d-flex flex-column">
                         <div class="product_trending_img_scale">
-                            <div class="product_trending_img" style="background-image: url('assets/img/<?= $value['image'] ?>');"></div>
+                            <div class="product_trending_img" style="background-image: url('/content/img/<?= $value['image'] ?>');"></div>
                         </div>
                         <div class="p-2">
                             <h4 class="product_trending_heading"><?= $value['name']?></h4>

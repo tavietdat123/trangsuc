@@ -1,5 +1,103 @@
+<?php
+if (isset($_POST['check'])) {
+    $name = $_POST['name'];
+    $price = $_POST['price'];
+    $origin = $_POST['origin'];
+    $quantity = $_POST['quantity'];
+    $weight = $_POST['weight'];
+    $format = $_POST['format'];
+    $typeofstone = $_POST['typeofstone'];
+    $description = $_POST['description'];
+    $category_id = $_POST['category_id'];
+    $image = $_FILES['image'];
+    $image1 = $_FILES['image1'];
+    $image2 = $_FILES['image2'];
+    $image3 = $_FILES['image3'];
+    if ($image['size'] > 0) {
+        $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
+        if ($ext != "png" && $ext != "jpg" && $ext != "jpeg" && $ext != "gif") {
+            $erorr_img = "File không đúng định dạng";
+        }
+    } else {
+        $erorr_img = "Bạn chưa nhập ảnh";
+    }
+    if ($image1['size'] > 0) {
+        $ext = pathinfo($image1['name'], PATHINFO_EXTENSION);
+        if ($ext != "png" && $ext != "jpg" && $ext != "jpeg" && $ext != "gif") {
+            $erorr_img1 = "File không đúng định dạng";
+        }
+    } else {
+        $erorr_img1 = "Bạn chưa nhập ảnh";
+    }
+    if ($image2['size'] > 0) {
+        $ext = pathinfo($image2['name'], PATHINFO_EXTENSION);
+        if ($ext != "png" && $ext != "jpg" && $ext != "jpeg" && $ext != "gif") {
+            $erorr_img2 = "File không đúng định dạng";
+        }
+    } else {
+        $erorr_img2 = "Bạn chưa nhập ảnh";
+    }
+    if ($image3['size'] > 0) {
+        $ext = pathinfo($image3['name'], PATHINFO_EXTENSION);
+        if ($ext != "png" && $ext != "jpg" && $ext != "jpeg" && $ext != "gif") {
+            $erorr_img3 = "File không đúng định dạng";
+        }
+    } else {
+        $erorr_img3 = "Bạn chưa nhập ảnh";
+    }
+    if ($name == "") {
+        $erorr_name = "Bạn chưa nhập tên sản phẩm";
+    }
+    if ($category_id == "") {
+        $erorr_category_id = "Bạn chưa nhập tên sản phẩm";
+    }
+    if ($origin == "") {
+        $erorr_origin = "Bạn chưa nhập xuất sứ sản phẩm";
+    }
+    if ($format == "") {
+        $erorr_format = "Bạn chưa nhập hình dạng sản phẩm";
+    }
+    if ($typeofstone == "") {
+        $erorr_typeofstone = "Bạn chưa nhập loại đá sản phẩm";
+    }
+    if ($description == "") {
+        $erorr_description = "Bạn chưa nhập mô tả sản phẩm";
+    }
+    if($price == ""){
+        $erorrprice = "Bạn chưa nhập giá sản phẩm";
+    }elseif($price <= 0){
+        $erorrprice = "Bạn phải nhập số dương";
+    }
+    if($quantity == ""){
+        $erorrquantity = "Bạn chưa nhập số lượng";
+    }elseif($quantity <= 0){
+        $erorrquantity = "Bạn phải nhập số dương";
+    }
+    if($weight == ""){
+        $erorrweight = "Bạn chưa nhập khối lượng";
+    }elseif($weight <= 0){
+        $erorrweight = "Bạn phải nhập số dương";
+    }
+    if(!isset($erorr_img) && !isset($erorr_img1) && !isset($erorr_img2) && !isset($erorr_img3) && !isset($erorr_name) && !isset($erorr_origin) && !isset($erorr_format) && !isset($erorr_typeofstone) && !isset($erorr_description) && !isset($erorrprice) && !isset($erorrquantity) && !isset($erorrweight) && !isset($erorr_category_id)){
+        $img_sp = $image['name'];
+        $img_sp1 = $image1['name'];
+        $img_sp2 = $image2['name'];
+        $img_sp3 = $image3['name'];
+        pro_insert($name,$price,$origin,$quantity,$img_sp, $category_id);
+        move_uploaded_file($image['tmp_name'] , '../content/img/'.$img_sp);
+        $id =  array_pop(pro_selectall())['id'];
+        detail_insert($weight, $typeofstone, $format, $description, $img_sp1, $img_sp2, $img_sp3, $id);
+        move_uploaded_file($image1['tmp_name'] , '../content/img/'.$img_sp1);
+        move_uploaded_file($image2['tmp_name'] , '../content/img/'.$img_sp2);
+        move_uploaded_file($image3['tmp_name'] , '../content/img/'.$img_sp3);
+        header("Location: index.php?product");
+        }
+   
+}
+$categorie = category_selectall();
+?>
 <h4>Tạo Sản Phẩm Mới</h4>
-                <form action="/admincreateprd.php" method="post" enctype="multipart/form-data">
+                <form action="index.php?product_add" method="post" enctype="multipart/form-data">
                     <input type="hidden" >
                     <div class='form-group w-75'>
                         <label class="mt-2" for="">Tên sản phẩm</label>

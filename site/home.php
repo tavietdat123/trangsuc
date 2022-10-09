@@ -91,9 +91,9 @@
 
             <?php foreach ($ctgr1 as $key => $value) : ?>
               <div class="product_trending_item">
-                <a href="productdetail.php?id=<?= $value['id'] ?>" class="product_trending_link d-flex flex-column">
+                <a href="index.php?productdetail&id=<?= $value['id'] ?>" class="product_trending_link d-flex flex-column">
                   <div class="product_trending_img" style="
-                  background-image: url('assets/img/<?= $value['image'] ?>');
+                  background-image: url('/content/img/<?= $value['image'] ?>');
                 "></div>
                   <div class="p-2">
                     <h4 class="product_trending_heading">
@@ -134,10 +134,10 @@
               <?php foreach ($ctgr2 as $key => $value) : ?>
 
                 <div class="collection_product_item">
-                  <a href="productdetail.php?id=<?= $value['id'] ?>" class="collection_product_link">
+                  <a href="index.php?productdetail&id=<?= $value['id'] ?>" class="collection_product_link">
                     <div class="collection_product_scale">
                       <div class="collection_product_img" style="
-                          background-image: url('assets/img/<?= $value['image'] ?> ');
+                          background-image: url('/content/img/<?= $value['image'] ?> ');
                         "></div>
                     </div>
                     <div class="p-2">

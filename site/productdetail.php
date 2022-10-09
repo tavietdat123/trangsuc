@@ -15,12 +15,12 @@ $user = user_selectusername($username);
 </div>
 <div class="detail_container d-flex justify-content-center">
     <div class="detail_container_list_img">
-        <div class="detail_container_item_img active mb-2"><img src="assets/img/<?=$detail['image1']?>" alt=""></div>
-        <div class="detail_container_item_img mb-2"><img src="assets/img/<?=$detail['image2']?>" alt=""></div>
-        <div class="detail_container_item_img"><img src="assets/img/<?=$detail['image3']?>" alt=""></div>
+        <div class="detail_container_item_img active mb-2"><img src="/content/img/<?=$detail['image1']?>" alt=""></div>
+        <div class="detail_container_item_img mb-2"><img src="/content/img/<?=$detail['image2']?>" alt=""></div>
+        <div class="detail_container_item_img"><img src="/content/img/<?=$detail['image3']?>" alt=""></div>
     </div>
     <div class="detail_img_main">
-        <img src="assets/img/<?=$detail['image1']?>" alt="">
+        <img src="/content/img/<?=$detail['image1']?>" alt="">
     </div>
     <div class="detail_content ">
         <div class="detail_content_title">
@@ -101,7 +101,7 @@ $user = user_selectusername($username);
 <div class="home_product_trending m-80">
     <div class="home_trending_heading d-flex justify-content-between">
       <h2>Sản Phẩm Liên Quan</h2>
-      <a href="/product.php" class="btn text-decoration-underline"
+      <a href="index.php?product" class="btn text-decoration-underline"
         >Xem thêm</a
       >
     </div>
@@ -111,13 +111,13 @@ $user = user_selectusername($username);
 <?php foreach ($ctgr as $key => $value):?>
           <div class="product_trending_item">
             <a
-              href="productdetail.php?id=<?=$value['id'] ?>"
+              href="index.php?productdetail&id=<?=$value['id'] ?>"
               class="product_trending_link d-flex flex-column"
             >
               <div
                 class="product_trending_img"
                 style="
-                  background-image: url('assets/img/<?=$value['image']?>');
+                  background-image: url('/content/img/<?=$value['image']?>');
                 "
               ></div>
               <div class="p-2">
@@ -147,3 +147,4 @@ $user = user_selectusername($username);
     </div>
   </div>
 </div>
+<script src="/content/js/detail.js"></script>

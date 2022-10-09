@@ -14,16 +14,21 @@ function detail_select_one($id)
 }
 
 //Thêm 
-function detail_insert($weight, $typeofstone, $format, $destion, $image, $product_id)
+function detail_insert($weight, $typeofstone, $format, $description, $image1, $image2, $image3, $product_id)
 {
-    $sql = "insert into detail (weight, typeofstone, format, destion, image, product_id)
-        values(?,?,?,?,?,?)";
-    pdo_execute($sql, $weight, $typeofstone, $format, $destion, $image, $product_id);
+    $sql = "insert into detail (weight, typeofstone, format, description, image1, image2, image3, product_id)
+        values(?,?,?,?,?,?,?,?)";
+    pdo_execute($sql, $weight, $typeofstone, $format, $description, $image1, $image2, $image3, $product_id);
 }
-function detail_update($id, $weight, $typeofstone, $format, $destion, $image, $product_id)
+function detail_update($id, $weight, $typeofstone, $format, $description, $image1, $image2, $image3, $product_id)
 {
-    $sql = "UPDATE detail SET weight = ?, typeofstone = ?, format = ?, destion = ?, image = ?, product_id = ? WHERE id = ?";
-    pdo_execute($sql, $weight, $typeofstone, $format, $destion, $image, $product_id);
+    $sql = "UPDATE detail SET weight = ?, typeofstone = ?, format = ?, description = ?, image1 = ?, image2 = ?, image3 = ?, product_id = ? WHERE id = ?";
+    pdo_execute($sql, $weight, $typeofstone, $format, $description, $image1, $image2, $image3, $product_id,$id);
+}
+function detail_update1( $weight, $typeofstone, $format, $description, $image1, $image2, $image3, $product_id)
+{
+    $sql = "UPDATE detail SET weight = ?, typeofstone = ?, format = ?, description = ?, image1 = ?, image2 = ?, image3 = ? WHERE product_id = ? ";
+    pdo_execute($sql, $weight, $typeofstone, $format, $description, $image1, $image2, $image3, $product_id);
 }
 
 function detail_delete($id)

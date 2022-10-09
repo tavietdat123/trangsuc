@@ -36,7 +36,7 @@ foreach ($rows as $key => $value) {
                 }
 if(!isset($errortk) && !isset($errorem) && !isset($errormk)&& !isset($errorremk)){
     user_insert($emailphone_dk, $password_dk, $username_dk, $role);
-    header("location: index.php?login");
+    header("location: login.php");
 
 }}
 ?>
@@ -64,7 +64,7 @@ if(!isset($errortk) && !isset($errorem) && !isset($errormk)&& !isset($errorremk)
         </div>
         <div class="login_form d-flex w-100 mt-4  flex-column">
             
-            <form action="index.php?register" method="POST" class="">
+            <form action="register.php" method="POST" class="">
 
 
             <div class="">

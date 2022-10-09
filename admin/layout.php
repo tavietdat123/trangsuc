@@ -1,4 +1,6 @@
+<?php 
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +53,7 @@
                <div class="control_user_list">
                 <div class="control_user_item"><a class="control_user_link" href="">Tài Khoản</a> </div>
                 <div class="control_user_item"><a class="control_user_link" href="">Cài đặt</a> </div>
-                <div class="control_user_item"><a class="control_user_link" href="/adminlogout.php">Đăng xuất</a> </div>
+                <div class="control_user_item"><a class="control_user_link" href="logout_admin.php">Đăng xuất</a> </div>
               </div>
                 </div>
             </div>

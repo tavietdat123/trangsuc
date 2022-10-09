@@ -1,5 +1,7 @@
+<?php
+$result = category_selectall();
+?>
 <a href="index.php?category_add" class="btn btn-primary mb-4 pe-5 ps-5">Tạo Danh Mục Mới</a>
-
           <table class="table table-hover">
             <thead>
               <tr>
@@ -16,10 +18,10 @@
                 
                 <th><?=$value['name']?></th>
                 <th>
-                  <a href="admindlctgr.php?id=<?php echo$value['id']?>"
+                  <a href="delete_category.php?id=<?php echo$value['id']?>"
                     ><button class="btn btn-danger">xóa</button></a
                   >
-                  <a href="adminfixctgr.php?id=<?php echo$value['id']?>"
+                  <a href="index.php?category_fix&id=<?php echo$value['id']?>"
                     ><button class="btn bg-primary text-white">Sửa</button></a
                   >
                 </th>

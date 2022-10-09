@@ -7,6 +7,16 @@ function user_selectall()
     $sql = "SELECT * from users";
     return pdo_query($sql);
 }
+function user_selectall_role_id()
+{
+    $sql = "SELECT * from users where role_id = 1";
+    return pdo_query($sql);
+}
+function user_selectall_id($id)
+{
+    $sql = "SELECT * from users where id = $id";
+    return pdo_query_one($sql);
+}
 function user_selectusername($username)
 {
     $sql = "SELECT * from users where username = '$username'";
@@ -20,10 +30,10 @@ function user_insert($username, $password, $name, $role_id)
     pdo_execute($sql, $username, $password, $name, $role_id);
 }
 
-function user_update($id,$username, $password, $name, $role_id)
+function user_update($id,$username, $password, $name)
 { 
-    $sql = " UPDATE users SET username = ?, password = ?,name=?,role_id=?  WHERE id = ?";
-    pdo_execute($sql,$username, $password, $name,$role_id,$id);
+    $sql = " UPDATE users SET username = ?, password = ?,name=?  WHERE id = ?";
+    pdo_execute($sql,$username, $password, $name,$id);
 }
 
 //Xóa khách hàng

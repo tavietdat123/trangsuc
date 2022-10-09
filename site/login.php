@@ -15,11 +15,11 @@ $rows = user_selectall();
               
            }else{
             $_SESSION['admin']= $value['username'];
-            header("location: index.php");
+            header("location: ../admin/index.php");
            }
        }elseif(!($value['username'] == $username_dn) || !($value['password'] == $password_dn) ){
            $errormkall_dn = "Tài khoản hoặc mật khẩu không chính xác";
-           echo"test 2";
+           
        }
    }
  }
@@ -55,7 +55,7 @@ $rows = user_selectall();
         </div>
         <div class="login_form d-flex w-100 mt-4 pb-lg-5 flex-column">
             
-            <form action="" method="POST" class="">
+            <form action="login.php" method="POST" class="">
                 <div class="">
                     <label for="">Tài khoản</label></div>
                     <div>

@@ -1,5 +1,15 @@
 <?php
 require_once '../global.php';
+session_start();
+require_once "../dao/user_dao.php";
+require_once "../dao/product_dao.php";
+require_once "../dao/detail_dao.php";
+require_once "../dao/category_dao.php";
+require_once "../dao/cart_dao.php";
+
+if(!isset($_SESSION['admin'])){
+   header("location: ../site/login.php");
+}
 if(isset($_GET['product'])){
 
     $VIEW_NAME = 'product.php';
