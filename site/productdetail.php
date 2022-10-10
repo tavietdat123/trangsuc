@@ -147,4 +147,4 @@ $user = user_selectusername($username);
     </div>
   </div>
 </div>
-<script src="/content/js/detail.js"></script>
+<script src="../content/js/detail.js"></script>
