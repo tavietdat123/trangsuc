@@ -20,7 +20,7 @@ $result1 = 0;
 <div class="cart_no_product justify-content-center align-items-center d-flex flex-column">
     <img  src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/cart/9bdd8040b334d31946f49e36beaf32db.png" alt="">
     <span class="mt-3">Bạn cần đăng nhập để xem giỏ hàng</span>
-    <a href="index.php?login" class="btn btn-danger mt-3">Đăng nhập</a>
+    <a href="login.php" class="btn btn-danger mt-3">Đăng nhập</a>
     </div>
 <?php endif; ?>
 <?php if(isset($carts) &&  $carts): ?>
