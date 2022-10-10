@@ -37,7 +37,7 @@
       <div class="container_slide_trending">
         <div class="home_trending_list d-flex">
           <div class="home_trending_item">
-            <a class="home_trending_link" href="/product.php"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/lac-vong-tay.png" alt="" /><span class="home_trending_item_text">Lắc-Vòng tay vàng</span></a>
+            <a class="home_trending_link" href="../site/product.php"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/lac-vong-tay.png" alt="" /><span class="home_trending_item_text">Lắc-Vòng tay vàng</span></a>
           </div>
           <div class="home_trending_item">
             <a class="home_trending_link" href="/product.php"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/day-chuyen-bac.png" alt="" /><span class="home_trending_item_text">Dây chuyền bạc</span></a>

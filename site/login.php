@@ -1,7 +1,7 @@
 
     <div class="container-fluid d-flex login_container  justify-content-center flex-column  align-items-center  ">
         <div class="logo_login mb-2 pe-4">
-            <img src="/content/img/pnj.com 1.png" alt="">
+            <img src="../content/img/pnj.com 1.png" alt="">
         </div>
         <div class="login_heading text-center">
             <h5>Chào Mừng Đến Với PNJ</h5>
