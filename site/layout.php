@@ -197,6 +197,11 @@
             </div>
         </div>
     </div>
+    <?php if($_SESSION['admin']):?>
+    <div class="container_contact_fix1">
+        <div><a href="../admin/index.php">Quay Lại Trang Admin <i class="fa-solid fa-right-to-bracket"></i></a></div>
+    </div>
+    <?php endif ?>
     <script src="../content/js/contact.js"></script>
 
 </body>

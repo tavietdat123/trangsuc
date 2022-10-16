@@ -8,7 +8,6 @@ require_once "../dao/category_dao.php";
 require_once "../dao/cart_dao.php";
 
 if(isset($_GET['product'])){
-
     $VIEW_NAME = 'product.php';
     $TITLE_NAME = "Sản Phẩm";
 }elseif(isset($_GET['introduce'])){

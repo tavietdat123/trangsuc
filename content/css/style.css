@@ -102,7 +102,7 @@
   }
   .nav__link {
     height: 40px;
-    width: 138px;
+    width: 140px;
     line-height: 40px;
     font-size: 14px;
     text-decoration: none;
@@ -195,6 +195,22 @@
     bottom: 80px;
   
     right: 15px;
+  }
+  .container_contact_fix1{
+    position: fixed;
+    top: 120px;
+    right: 10px;
+    z-index: 999999999999;
+   
+  }
+  .container_contact_fix1 a{
+    padding: 5px 10px;
+    overflow: hidden;
+   background-color: #f5ece3;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 1px 0px 4px #777;
+    color: #000;
   }
   .contact_all {
     position: fixed;
