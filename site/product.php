@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <div class="container p-0 ">
         <img width="w-100" src="https://cdn.pnj.io/images/promo/135/cuoi-t7-1200x450.jpg" alt="">
     </div>
@@ -96,7 +97,17 @@
                 </div>
             </div>
             <?php endforeach;?>
+=======
+>>>>>>> Stashed changes
 
-        </div>
 
-    </div>
+<?php
+// $prd_all = pro_selectall();
+// include_once 'categories.php';
+foreach ($dssp as $sp) {
+    $name = $sp['name'];
+    $image = $sp['image'];
+    echo '' . $image . '';
+}
+
+?>

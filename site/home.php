@@ -37,31 +37,35 @@
       <div class="container_slide_trending">
         <div class="home_trending_list d-flex">
           <div class="home_trending_item">
+<<<<<<< Updated upstream
             <a class="home_trending_link" href="../site/product.php"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/lac-vong-tay.png" alt="" /><span class="home_trending_item_text">Lắc-Vòng tay vàng</span></a>
+=======
+            <a class="home_trending_link" href="index.php?product"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/lac-vong-tay.png" alt="" /><span class="home_trending_item_text">Lắc-Vòng tay vàng</span></a>
+>>>>>>> Stashed changes
           </div>
           <div class="home_trending_item">
-            <a class="home_trending_link" href="/product.php"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/day-chuyen-bac.png" alt="" /><span class="home_trending_item_text">Dây chuyền bạc</span></a>
+            <a class="home_trending_link" href="index.php?product"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/day-chuyen-bac.png" alt="" /><span class="home_trending_item_text">Dây chuyền bạc</span></a>
           </div>
           <div class="home_trending_item">
-            <a class="home_trending_link" href="/product.php"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/vong-lac-tay-bac.png" alt="" /><span class="home_trending_item_text">Lắc – Vòng tay Bạc</span></a>
+            <a class="home_trending_link" href="index.php?product"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/vong-lac-tay-bac.png" alt="" /><span class="home_trending_item_text">Lắc – Vòng tay Bạc</span></a>
           </div>
           <div class="home_trending_item">
-            <a class="home_trending_link" href="/product.php"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/dong-ho.png" alt="" /><span class="home_trending_item_text">Đồng hồ</span></a>
+            <a class="home_trending_link" href="index.php?product"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/dong-ho.png" alt="" /><span class="home_trending_item_text">Đồng hồ</span></a>
           </div>
           <div class="home_trending_item">
-            <a class="home_trending_link" href="/product.php"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/nhan-ecz.png" alt="" /><span class="home_trending_item_text">Nhẫn ECZ</span></a>
+            <a class="home_trending_link" href="index.php?product"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/nhan-ecz.png" alt="" /><span class="home_trending_item_text">Nhẫn ECZ</span></a>
           </div>
           <div class="home_trending_item">
-            <a class="home_trending_link" href="/product.php"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/bong-tai-kim-cuong.png" alt="" /><span class="home_trending_item_text">Bông tai kim cương</span></a>
+            <a class="home_trending_link" href="index.php?product"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/bong-tai-kim-cuong.png" alt="" /><span class="home_trending_item_text">Bông tai kim cương</span></a>
           </div>
           <div class="home_trending_item">
-            <a class="home_trending_link" href="/product.php"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/bong-tai-vang.png" alt="" /><span class="home_trending_item_text">Bông tai vàng</span></a>
+            <a class="home_trending_link" href="index.php?product"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/bong-tai-vang.png" alt="" /><span class="home_trending_item_text">Bông tai vàng</span></a>
           </div>
           <div class="home_trending_item">
-            <a class="home_trending_link" href="/product.php"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/nhan-kim-cuong.png" alt="" /><span class="home_trending_item_text">Nhẫn kim cương</span></a>
+            <a class="home_trending_link" href="index.php?product"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/nhan-kim-cuong.png" alt="" /><span class="home_trending_item_text">Nhẫn kim cương</span></a>
           </div>
           <div class="home_trending_item">
-            <a class="home_trending_link" href="/product.php"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/day-chuyen-vang.png" alt="" /><span class="home_trending_item_text">Dây chuyền vàng</span></a>
+            <a class="home_trending_link" href="index.php?product"><img src="https://cdn.pnj.io/images/image-update/2022/hot-categories/day-chuyen-vang.png" alt="" /><span class="home_trending_item_text">Dây chuyền vàng</span></a>
           </div>
 
         </div>
@@ -87,7 +91,11 @@
               <div class="product_trending_item">
                 <a href="productdetail.php?id=<?= $value['id'] ?>" class="product_trending_link d-flex flex-column">
                   <div class="product_trending_img" style="
+<<<<<<< Updated upstream
                   background-image: url('assets/img/<?= $value['image'] ?>');
+=======
+                  background-image: url('../content/img/<?= $value['image'] ?>');
+>>>>>>> Stashed changes
                 "></div>
                   <div class="p-2">
                     <h4 class="product_trending_heading">
@@ -131,7 +139,11 @@
                   <a href="productdetail.php?id=<?= $value['id'] ?>" class="collection_product_link">
                     <div class="collection_product_scale">
                       <div class="collection_product_img" style="
+<<<<<<< Updated upstream
                           background-image: url('assets/img/<?= $value['image'] ?> ');
+=======
+                          background-image: url('../content/img/<?= $value['image'] ?> ');
+>>>>>>> Stashed changes
                         "></div>
                     </div>
                     <div class="p-2">

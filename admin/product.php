@@ -20,7 +20,11 @@
                 <th>
                   <img
                     height="80"
+<<<<<<< Updated upstream
                     src="assets/img/<?=$value['image']?>"
+=======
+                    src="../content/img/<?=$value['image']?>"
+>>>>>>> Stashed changes
                   />
                 </th>
                 <th><?=$value['name']?></th>

@@ -24,7 +24,7 @@
                         </ul>
                     </div>
                     <div>
-                        <a href="index.php"><img class="logo__img" src="/content/img/pnj.com 1.png" alt=""></a>
+                        <a href="index.php"><img class="logo__img" src="../content/img/pnj.com 1.png" alt=""></a>
                     </div>
                     <div class="function">
                         <ul class="logo__list d-flex">
@@ -72,7 +72,11 @@
                         <ul class="nav__list d-flex">
                             <li class="nav__item"><a href="index.php" class="nav__link <?php if($VIEW_NAME=="home.php"){echo"active";}?>">Trang chủ</a></li>
                             <li class="nav__item"><a href="index.php?introduce" class="nav__link <?php if($VIEW_NAME=="introduce.php"){echo"active";}?>">Liên Hệ</a></li>
+<<<<<<< Updated upstream
                             <li class="nav__item"><a href="index.php?productdetail" class="nav__link <?php if($VIEW_NAME=="product.php"){echo"active";}?>">Sản Phẩm</a></li>
+=======
+                            <li class="nav__item"><a href="index.php?categories" class="nav__link <?php if($VIEW_NAME=="categories.php"){echo"active";}?>">Sản Phẩm</a></li>
+>>>>>>> Stashed changes
                             <li class="nav__item"><a href="index.php?promotion" class="nav__link orange">Khuyến Mãi</a></li>
                         </ul>
                     </div>
@@ -96,7 +100,7 @@
     <div class="container-fluid">
         <div class="footer">
             <div class="footer_logo d-flex justify-content-center mt-5 mb-5">
-                <img src="/content/img/pnj.com 1.png" alt="">
+                <img src="../content/img/pnj.com 1.png" alt="">
             </div>
             <div class="row footer_list">
                 <div class="col-3 footer_item text-center">

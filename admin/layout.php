@@ -15,7 +15,7 @@
     <div class="container-fluid p-0">
         <div class="nav d-flex flex-column">
             <div class="logo d-flex justify-content-center mt-2 pe-2">
-<img src="/content/img/Untitled-2.png" alt="">
+<img src="../content/img/Untitled-2.png" alt="">
             </div>
             <div class="nav_heading mt-3">
                 <h5>Quản Trị</h5>

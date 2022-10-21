@@ -1,6 +1,65 @@
+<<<<<<< Updated upstream
+=======
+<?php
+require_once "../dao/user_dao.php";
+
+$rows = user_selectall();
+ if(isset($_POST['check'])){
+  $username_dk = $_POST['username_dk'];
+  $emailphone_dk = $_POST['emailphone_dk'];
+  $password_dk = $_POST['password_dk'];
+  $re_password_dk = $_POST['re_password_dk'];
+  $role = 1;
+
+$checktk=0;
+foreach ($rows as $key => $value) {
+    if(isset($emailphone_dk)){
+   if($value['username'] == $emailphone_dk){
+    $checktk = 1;
+   }}
+}
+     if($username_dk == "") {
+    $errortk= "Bạn chưa nhập tên";
+ }
+            if($emailphone_dk == "") {
+                $errorem = "Bạn chưa nhập tên đăng nhập";
+            }elseif($checktk == 1){
+                $errorem="Tên đăng nhập đã tồn tại";
+                     } 
+            if($password_dk == "") {
+                $errormk = "Bạn chưa nhập Mật khẩu";
+            }elseif(strlen($password_dk) < 6){
+                $errormk ="Mật khẩu ít nhất 6 kí tự";
+            }
+                if($re_password_dk == "") {
+                    $errorremk =  "Nhập lại mật khẩu không trùng khớp";
+                }elseif(!($re_password_dk == $password_dk)){
+                    $errorremk =  "Nhập lại mật khẩu không trùng khớp";
+                }
+if(!isset($errortk) && !isset($errorem) && !isset($errormk)&& !isset($errorremk)){
+    user_insert($emailphone_dk, $password_dk, $username_dk, $role);
+    header("location: login.php");
+
+}}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Kí</title>
+    <link rel="shortcut icon" href="../content/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../content/lib/bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../content/css/style.css">
+</head>
+<body>
+>>>>>>> Stashed changes
 <div class="container-fluid d-flex login_container  justify-content-center flex-column  align-items-center  ">
         <div class="logo_login mb-2 pe-4">
-            <img src="/content/img/pnj.com 1.png" alt="">
+            <img src="../content/img/pnj.com 1.png" alt="">
         </div>
         <div class="login_heading text-center">
             <h5>Chào Mừng Đến Với PNJ</h5>

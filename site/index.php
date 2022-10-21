@@ -29,7 +29,18 @@ if(isset($_GET['product'])){
     $VIEW_NAME = 'cart.php';
     $TITLE_NAME = "Giỏ Hàng";
 
+<<<<<<< Updated upstream
 }elseif(isset($_GET['login'])){
+=======
+}
+elseif(isset($_GET['categories'])){
+    $VIEW_NAME='categories.php';
+    $TITLE_NAME='Danh Mục';
+
+}
+
+// elseif(isset($_GET['login'])){
+>>>>>>> Stashed changes
 
     $VIEW_NAME = 'login.php';
     $TITLE_NAME = "Đăng Nhập";

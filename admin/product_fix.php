@@ -44,7 +44,11 @@
                     </div>
                     <div class='form-group w-75'>
                         <label class="mt-2" for="">Ảnh hiển thị sản phẩm</label>
+<<<<<<< Updated upstream
                         <img height="150" src="assets/img/<?= $getprd['image']?>" alt="">
+=======
+                        <img height="150" src="../content/img/<?= $getprd['image']?>" alt="">
+>>>>>>> Stashed changes
                         <input type="hidden" value="<?= $getprd['image']?>" name="anh">
                         <input type="file" name='image' class='form-control' >
                         <span style="color: red; font-size: 12px;"><?php if (isset($erorr_img)) {
@@ -53,7 +57,11 @@
                     </div>
                     <div class='form-group w-75'>
                         <label class="mt-2" for="">ảnh chi tiết 1 </label>
+<<<<<<< Updated upstream
                         <img height="150" src="assets/img/<?= $getdetail['image1']?>" alt="">
+=======
+                        <img height="150" src="../content/img/<?= $getdetail['image1']?>" alt="">
+>>>>>>> Stashed changes
                         <input type="hidden" value="<?= $getdetail['image1']?>" name="anh1">
                         <input type="file" name='image1' class='form-control' >
                         <span style="color: red; font-size: 12px;"><?php if (isset($erorr_img1)) {
@@ -62,7 +70,11 @@
                     </div>
                     <div class='form-group w-75'>
                         <label class="mt-2" for="">ảnh chi tiết 2</label>
+<<<<<<< Updated upstream
                         <img height="150" src="assets/img/<?= $getdetail['image2']?>" alt="">
+=======
+                        <img height="150" src="../content/img/<?= $getdetail['image2']?>" alt="">
+>>>>>>> Stashed changes
                         <input type="hidden" value="<?= $getdetail['image2']?>" name="anh2">
                         <input type="file" name='image2' class='form-control' >
                         <span style="color: red; font-size: 12px;"><?php if (isset($erorr_img2)) {
@@ -71,7 +83,11 @@
                     </div>
                     <div class='form-group w-75'>
                         <label class="mt-2" for="">ảnh chi tiết 3</label>
+<<<<<<< Updated upstream
                         <img height="150" src="assets/img/<?= $getdetail['image3']?>" alt="">
+=======
+                        <img height="150" src="../content/img/<?= $getdetail['image3']?>" alt="">
+>>>>>>> Stashed changes
                         <input type="hidden" value="<?= $getdetail['image3']?>" name="anh3">
                         <input type="file" name='image3' class='form-control' >
                         <span style="color: red; font-size: 12px;"><?php if (isset($erorr_img3)) {

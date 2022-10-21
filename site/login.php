@@ -1,4 +1,54 @@
+<<<<<<< Updated upstream
 
+=======
+<?php 
+require_once "../dao/user_dao.php";
+session_start();
+$rows = user_selectall();
+ if(isset($_POST['check'])){
+   $username_dn = $_POST['username_dn'];
+   $password_dn = $_POST['password_dn'];
+ foreach ($rows as $key => $value) {
+   if(isset($username_dn) && isset($password_dn)){
+       if($value['username'] == $username_dn && $value['password'] == $password_dn){
+           if($value['role_id']== 1){
+              $_SESSION['name']= $value['username'];
+             header("location: index.php");
+             break;
+              
+           }else{
+            $_SESSION['admin']= $value['username'];
+            header("location: ../admin/index.php");
+           }
+       }elseif(!($value['username'] == $username_dn) || !($value['password'] == $password_dn) ){
+           $errormkall_dn = "Tài khoản hoặc mật khẩu không chính xác";
+           
+       }
+   }
+ }
+   if($username_dn == ""){
+       $errortk_dn = "Bạn cần nhập trường này";
+   }
+   if ($password_dn == "") {
+       $errormk_dn = "Bạn cần nhập trường này";
+   }
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <link rel="shortcut icon" href="../content/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../content/lib/bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../content/css/style.css">
+</head>
+<body>
+>>>>>>> Stashed changes
     <div class="container-fluid d-flex login_container  justify-content-center flex-column  align-items-center  ">
         <div class="logo_login mb-2 pe-4">
             <img src="../content/img/pnj.com 1.png" alt="">

@@ -4,12 +4,21 @@
 </div>
 <div class="detail_container d-flex justify-content-center">
     <div class="detail_container_list_img">
+<<<<<<< Updated upstream
         <div class="detail_container_item_img active mb-2"><img src="assets/img/<?=$detail['image1']?>" alt=""></div>
         <div class="detail_container_item_img mb-2"><img src="assets/img/<?=$detail['image2']?>" alt=""></div>
         <div class="detail_container_item_img"><img src="assets/img/<?=$detail['image3']?>" alt=""></div>
     </div>
     <div class="detail_img_main">
         <img src="assets/img/<?=$detail['image1']?>" alt="">
+=======
+        <div class="detail_container_item_img active mb-2"><img src="../content/img/<?=$detail['image1']?>" alt=""></div>
+        <div class="detail_container_item_img mb-2"><img src="../content/img/<?=$detail['image2']?>" alt=""></div>
+        <div class="detail_container_item_img"><img src="../content/img/<?=$detail['image3']?>" alt=""></div>
+    </div>
+    <div class="detail_img_main">
+        <img src="../content/img/<?=$detail['image1']?>" alt="">
+>>>>>>> Stashed changes
     </div>
     <div class="detail_content ">
         <div class="detail_content_title">
@@ -106,7 +115,11 @@
               <div
                 class="product_trending_img"
                 style="
+<<<<<<< Updated upstream
                   background-image: url('assets/img/<?=$value['image']?>');
+=======
+                  background-image: url('../content/img/<?=$value['image']?>');
+>>>>>>> Stashed changes
                 "
               ></div>
               <div class="p-2">
