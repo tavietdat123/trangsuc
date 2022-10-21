@@ -14,7 +14,7 @@ if (isset($_POST['check'])) {
     $image2 = $_FILES['image2'];
     $image3 = $_FILES['image3'];
     if ($image['size'] > 0) {
-        $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
+        $ext = pathinfo($image['name'], PATHINFO_EXTENSION);//Hàm pathinfo() sẽ lấy thông tin về đường dẫn truyền vào.
         if ($ext != "png" && $ext != "jpg" && $ext != "jpeg" && $ext != "gif") {
             $erorr_img = "File không đúng định dạng";
         }

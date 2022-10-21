@@ -17,7 +17,7 @@ function pdo_get_connection(){
  * @throws PDOException lỗi thực thi câu lệnh
  */
 function pdo_execute($sql){
-    $sql_args = array_slice(func_get_args(), 1);
+    $sql_args = array_slice(func_get_args(), 1);//func_get_args: trả về một mảng chứa tất cả các đối số đó
     try{
         $conn = pdo_get_connection();
         $stmt = $conn->prepare($sql);
@@ -27,7 +27,7 @@ function pdo_execute($sql){
         throw $e;
     }
     finally{
-        unset($conn);
+        unset($conn); //Hàm unset() trong PHP sẽ loại bỏ một hoặc nhiều biến được truyền vào. 
     }
 }
 /**
@@ -43,7 +43,7 @@ function pdo_query($sql){
         $conn = pdo_get_connection();
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
-        $rows = $stmt->fetchAll();
+        $rows = $stmt->fetchAll(); // fetchAll trả về tất cả bản ghi
         return $rows;
     }
     catch(PDOException $e){
@@ -66,7 +66,7 @@ function pdo_query_one($sql){
         $conn = pdo_get_connection();
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);// fetch trả về 1 bản ghi
         return $row;
     }
     catch(PDOException $e){

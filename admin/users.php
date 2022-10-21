@@ -8,7 +8,7 @@ $users = user_selectall_role_id();
                 <th>UserName</th>
                 <th>Password</th>
                 <th>Name</th>
-                
+
                 <th>hành động</th>
               </tr>
             </thead>

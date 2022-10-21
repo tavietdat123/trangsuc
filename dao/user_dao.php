@@ -9,7 +9,7 @@ function user_selectall()
 }
 function user_selectall_role_id()
 {
-    $sql = "SELECT * from users where role_id = 1";
+    $sql = "SELECT * from users where role_id = 1";// role_id=1 user; =2 quản trị
     return pdo_query($sql);
 }
 function user_selectall_id($id)

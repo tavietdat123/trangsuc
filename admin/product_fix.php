@@ -22,7 +22,7 @@ if (isset($_POST['check'])) {
     $anh2 = $_POST['anh2'];
     $anh3 = $_POST['anh3'];
     if ($image['size'] > 0) {
-        $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
+        $ext = pathinfo($image['name'], PATHINFO_EXTENSION);//pathinfo lấy thông tin đường dẫn chuyền vào
         if ($ext != "png" && $ext != "jpg" && $ext != "jpeg" && $ext != "gif") {
             $erorr_img = "File không đúng định dạng";
         }else{
