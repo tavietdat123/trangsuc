@@ -7,10 +7,10 @@ function pro_selectall()
     $sql = "SELECT * from products";
     return pdo_query($sql);
 }
-function pro_select_one($id) //lấy ra 1 bản ghi thỏa mãn điều kiện
+function pro_select_one($id) 
 {
     $sql = "SELECT * from products  where id = $id";
-    return pdo_query_one($sql);
+    return pdo_query_one($sql);//lấy ra 1 bản ghi thỏa mãn điều kiện
 }
 function pro_select_id_ctgr($id)
 {

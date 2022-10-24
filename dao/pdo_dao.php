@@ -17,17 +17,19 @@ function pdo_get_connection(){
  * @throws PDOException lỗi thực thi câu lệnh
  */
 function pdo_execute($sql){
-    $sql_args = array_slice(func_get_args(), 1);//func_get_args: trả về một mảng chứa tất cả các đối số đó
+    $sql_args = array_slice(func_get_args(), 1);
+    //func_get_args trả về một mảng chứa tất cả các đối số đó
+    //array_slice bỏ phần tử
     try{
         $conn = pdo_get_connection();
-        $stmt = $conn->prepare($sql);
+        $stmt = $conn->prepare($sql);//nạp sql  
         $stmt->execute($sql_args);
     }
     catch(PDOException $e){
         throw $e;
     }
     finally{
-        unset($conn); //Hàm unset() trong PHP sẽ loại bỏ một hoặc nhiều biến được truyền vào. 
+        unset($conn); //Hàm unset sẽ loại bỏ một hoặc nhiều biến được truyền vào. 
     }
 }
 /**
